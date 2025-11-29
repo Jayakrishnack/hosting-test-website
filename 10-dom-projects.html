@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom project</title>
+    <style>
+        .js-subscribe-button{
+            border: none;
+            color: white;
+            background-color: black;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .is-subscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input type="number" placeholder="cost of order" class="js-input-button">
+    <button onclick="inputs()">Caluculate</button>
+    <p class="js-p-tag"></p>
+    <script>
+        function subscribe(){
+            const but=document.querySelector('.js-subscribe-button');
+            // but.innerHTML='Subscribed';
+            if(but.innerText==='Subscribe'){
+                but.innerHTML='Subscribed'
+                but.classList.add('is-subscribed')
+            }
+            else{
+                but.innerHTML='Subscribe';
+                but.classList.remove('is-subscribed')
+            }
+        }
+        function inputs(){
+          const St=document.querySelector('.js-input-button')
+          let val=Number(St.value);
+        if(val<40){
+            const ptag=document.querySelector('.js-p-tag')
+            ptag.innerHTML=val+10
+        }else{
+            const ptag=document.querySelector('.js-p-tag')
+            ptag.innerHTML=val
+        }
+        }
+    </script>
+</body>
+</html>
