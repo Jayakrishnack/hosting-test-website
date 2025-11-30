@@ -13,10 +13,26 @@
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
+            margin-bottom: 30px;
         }
         .is-subscribed{
             background-color: rgb(240, 240, 240);
             color: black;
+        }
+        body{
+            font-family: Arial;
+        }
+        .cost-input{
+            font-size: 15px;
+            padding: 10px 15px;
+        }
+        .calculate-button{
+            background: green;
+            font-weight: bold;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 10px 15px;
         }
     </style>
 </head>
@@ -25,8 +41,8 @@
     <p>Youtube Subscribe Button</p>
     <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
     <p>Amazon Shipping Calculator</p>
-    <input type="number" placeholder="cost of order" class="js-input-button">
-    <button onclick="inputs()">Caluculate</button>
+    <input type="number" placeholder="cost of order" class="js-input-button cost-input">
+    <button onclick="inputs()" class="calculate-button">Caluculate</button>
     <p class="js-p-tag"></p>
     <script>
         function subscribe(){
